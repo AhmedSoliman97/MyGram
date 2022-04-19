@@ -1,0 +1,79 @@
+.Profile{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Cabin', sans-serif; 
+    box-sizing: border-box;
+    justify-content: center;  
+    
+}
+.ImageDiv{
+    width: 15%;
+}
+.ProfileImage{
+    height: 65%;
+    width: 85%;
+    border-radius: 50%;
+    background-color: transparent;
+    margin-top: 5%;
+    
+       
+}
+.PersonaDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: black;
+    font-family: 'Cabin', sans-serif;
+    text-align: left;
+    max-width: 35%; 
+    margin-left: 3%;
+}
+.Buttons{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    
+}
+.Button1{
+    
+    height: 80%;
+    position:relative;
+    color: white;
+    font-weight: bold;
+    padding: 2% 5%;
+    max-height: 45%;
+    background-color:rgb(10, 110, 211);
+    border: 1px solid rgb(10, 110, 211) ;
+    border-radius: 2px;
+    margin-left: 10%;
+    margin-right: 1%;
+    text-align: center;
+}
+.Button1:hover{
+    background-color: rgb(14, 82, 149);
+    cursor: pointer;
+}
+
+
+.Name{
+    font-size: 2em;
+}
+.AccountDetails{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding: 3% 0px;
+    max-width: 85%;
+}
+.Demo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.Demo a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(25, 83, 241);
+   
+}
+

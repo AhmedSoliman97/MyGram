@@ -1,0 +1,43 @@
+.Categories{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 30%;
+    margin-left: 33%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+     
+}
+
+.Category{
+    color: gray;
+    font-weight: bold;
+    font-size: 0.75em;
+     
+}
+.CategoryActive{
+    color: black;
+    
+}
+.Upperline{
+    position: absolute;
+    top:40%;
+    z-index: 50;
+    width: 50px;
+    height: 1.5px;
+    background-color: gray;
+
+}
+.Line{
+    margin-top: 3%;
+    position: relative;
+    background-color:#ccc;
+    width: 45%;
+    height: 2px;
+    left: 27%;
+}
+
+.Category:hover{
+    color: black;
+    cursor: pointer;
+}
