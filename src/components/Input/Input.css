@@ -21,6 +21,15 @@
     box-sizing: border-box;
     width: 100%;
 }
+.profilePiC{
+    background-color:dodgerblue;
+    border-radius: 2px;   
+}
+.profilePiC:hover{
+    cursor: pointer;
+    background-color: #ccc;
+    
+}
 .InputElement:focus{
     outline: none;
     background-color: #ccc;

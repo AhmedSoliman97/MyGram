@@ -27,7 +27,6 @@ class Stories extends Component{
             let categoryClass=['Category',this.state.classes[index]?'CategoryActive':'Category'];
             return(
                 <div key={index}>
-                    {this.state.classes[index]?<hr  className='Upperline'></hr>:null}
                     <div  className={categoryClass.join(' ')} onClick={()=>this.categoryChangeHandelr(index)}>
                     {cat}
                     </div>

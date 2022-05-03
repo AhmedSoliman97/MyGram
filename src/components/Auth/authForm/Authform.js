@@ -137,7 +137,7 @@ const Auth =(props)=> {
                 
                 <Toolbar/>
                 <div className={Classes.join(' ')}>
-    
+                {props.isError?<h3 style={{color:'red'}}>{props.isError} </h3>:null}
                     <form onSubmit={submitHandler}>
                         {form}
                         <Button btnType="Success">{isSignUp?'SignUp':'SignIn'}</Button>
@@ -154,7 +154,8 @@ const Auth =(props)=> {
 
 const mapStateToProps=state=>{
     return{
-        isAuth:state.Auth.token!== null,  
+        isAuth:state.Auth.token!== null,
+        isError:state.Auth.error,  
     }
 
 }

@@ -151,25 +151,29 @@ class Gallary extends Component{
         return(
             <div className="Gallery">
                     <Toolbar />
-                    <Profile 
+                    {this.props.isAuth?
+                    null
+                    :<h4>Please login first</h4>}
+                    
+                    {this.props.isAuth?<Profile 
                     profileSrc={this.props.Data.userPersonalData.ProfilePic}
                     changed={this.itemReadHandelr}
                      
                     imageNum={this.props.Data.images.length} 
                     videoNum={this.props.Data.videos.length} 
-                    favoriteNum={this.props.Data.favorites.length}/>
+                    favoriteNum={this.props.Data.favorites.length}/>:null}
 
-                    <Stories clicked={this.changeModeHandelr}/>
-                    {spin}
-                    <div className="Images">
+                    {this.props.isAuth?<Stories clicked={this.changeModeHandelr}/>:null}
+                    {this.props.isAuth?spin:null}
+                   { this.props.isAuth?<div className="Images">
                         {this.props.error?<p>{this.props.error}</p>:allImages}
-                    </div>
-                    <Backdrop show={this.state.show} closed={this.closeModelHandelr}/>
-                    <Model 
+                    </div>:null}
+                    {this.props.isAuth?<Backdrop show={this.state.show} closed={this.closeModelHandelr}/>:null}
+                    {this.props.isAuth?<Model 
                         show={this.state.show} 
                         closeModel={this.closeModelHandelr} 
                     ><img src={this.state.selectedImage} alt="its not uploaded"/>
-                    </Model>
+                    </Model>:null}
             </div>
         )
     }

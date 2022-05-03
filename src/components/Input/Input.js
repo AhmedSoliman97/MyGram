@@ -12,7 +12,20 @@ const Input=(props)=>{
     switch(props.elementType){
         case('input'):
             if(props.myKey !== 'userPersonalPic'){inputElement=<input onChange={props.changed} className={inputClasses.join(' ')} autoComplete='none' {...props.elementConfig} value={props.value}/>;}
-            else{inputElement=<input onChange={props.changed} className={inputClasses.join(' ')} autoComplete='none' {...props.elementConfig}/>;}
+            else{inputElement=
+                <div >
+                    <label htmlFor="pic" className='profilePiC' >choose profile Picture</label>
+                    <input  id="pic" style={{visibility:"hidden"}}  
+                    onChange={props.changed} 
+                    className={inputClasses.join(' ')} 
+                    autoComplete='none' 
+                    {...props.elementConfig} />
+                </div>
+                
+            }
+
+            
+
         break;
         case('textarea'):inputElement=<textarea onChange={props.changed} className={inputClasses.join(' ')} {...props.elementConfig} value={props.value}/>;
         break;

@@ -84,8 +84,9 @@ export const authentication=(email,password,isSignUp)=>{
 
             dispatch(Auth_success(res.data.idToken,res.data.localId) );
             dispatch(timeToLogout(res.data.expiresIn))
-        }).catch(err=>{
-            dispatch(Auth_failed(err.response.data.error))
+        }).catch(error=>{
+            
+            dispatch(Auth_failed(error.message))
         }) 
         
     
